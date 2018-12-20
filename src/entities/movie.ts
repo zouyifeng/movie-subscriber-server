@@ -22,12 +22,6 @@ export class Movie {
   cover: string;
 
   @Column()
-  score: string;
-
-  @Column()
-  origin_place: string;
-
-  @Column()
   actor: string;
 
   @Column()
@@ -38,7 +32,6 @@ export class Movie {
 
   @Column()
   rate: string;
-
 }
 
 

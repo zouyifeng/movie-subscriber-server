@@ -3,11 +3,10 @@ import {createConnection, Connection} from "typeorm";
 import { Movie } from './entities/movie'
 
 export class DBConnection {
-  constructor () {}
   /**
    * createConnection
    */
-  public async createConnection() {
+  public static async createConnection() {
     const config: any = DBConfig
     return await createConnection({
       type: config.type,

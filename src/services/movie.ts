@@ -5,7 +5,7 @@ import { getManager, getConnection } from 'typeorm';
 
 @injectable()
 export class MovieService {
-  public newMovie(movie: Movie): void {
+  public static newMovie(movie: Movie): void {
       // let newMovie: Movie = new Movie();
       // newMovie.title = movie.title
       getConnection().manager.save(movie);
