@@ -15,7 +15,9 @@ export class Movie {
   @Column()
   intro: string;
 
-  @Column()
+  @Column({
+    length: 500
+  })
   download_url: string;
 
   @Column()
@@ -25,13 +27,13 @@ export class Movie {
   actor: string;
 
   @Column()
-  type: string;
-
-  @Column()
   country: string;
 
   @Column()
   rate: string;
+
+  @Column()
+  create_time: string;
 }
 
 

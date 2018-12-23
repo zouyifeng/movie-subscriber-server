@@ -6,6 +6,8 @@ import axios, { AxiosRequestConfig, AxiosResponse } from 'axios'
 import { DBConnection } from './DBConnection'
 import { MovieService } from './services/movie'
 import { Movie } from './entities/movie'
+import { getConnection } from 'typeorm'
+import * as schedule from 'node-schedule'
 import app from './App'
 
 const port = 8089
@@ -38,10 +40,10 @@ const handleListPageResponse = (response: AxiosResponse) => {
     // movieList.push({ url, time })
     // console.log(url)
     const now = new Date()
-    const nowStr = `${now.getFullYear()}-${now.getMonth() < 10 ? '0' + now.getMonth() : now.getMonth()}-${now.getDate()}`
-    if (nowStr === time) {
+    const nowStr = `${now.getFullYear()}-${now.getMonth()+1 < 10 ? '0' + now.getMonth()+1 : now.getMonth()+1}-${now.getDate()}`
+    // if (nowStr === time) {
       fetch({ url: `https://www.dytt8.net${url}`, methods: 'get', responseType: 'arraybuffer'}, handleDetailPageResponse)
-    }
+    // }
   }
 }
 
@@ -65,11 +67,16 @@ const handleDetailPageResponse = (response: AxiosResponse) => {
   mv.actor = actor.trim()
   mv.cover = cover.trim()
   mv.download_url = downLoadUrl.trim()
+  // console.log(downLoadUrl.trim().length)
   mv.intro = intro.trim()
   mv.country = country.replace('◎产　　地', '').trim()
   mv.title = title.replace('◎片　　名', '').trim()
   mv.rate = rate.replace('◎豆瓣评分', '').trim()
   mv.publish_time = publishDate.replace('◎上映日期', '').trim()
+
+  const now = new Date();
+  const nowStr = `${now.getFullYear()}-${now.getMonth()+1 < 10 ? '0' + now.getMonth()+1 : now.getMonth()+1}-${now.getDate()}`;
+  mv.create_time = nowStr;
 
   MovieService.newMovie(mv)
 }
@@ -81,8 +88,18 @@ const fetch = (config: fetchConfig, handleResponse: axiosResponseFunc) => {
 
 DBConnection.createConnection()
   .then(() => {
-    fetch(listPageConfig, handleListPageResponse);  
+    console.log('数据库连接成功')
+    fetch(listPageConfig, handleListPageResponse);
+    schedule.scheduleJob('2 * * * * *', function() {
+      fetch(listPageConfig, handleListPageResponse);
+    })    
   })
+  .catch(e => {
+    console.log('数据库报错')
+    console.log(e)
+  })
+
+
 
 app.listen(port, err => {
   if (err) {
