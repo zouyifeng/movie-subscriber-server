@@ -6,7 +6,7 @@ import { DBConnection } from '../DBConnection'
 
 @injectable()
 export class MovieService {
-  public static async newMovie(movie: Movie): void {
+  public static async newMovie(movie: Movie) {
       // let newMovie: Movie = new Movie();
       // newMovie.title = movie.title
       getConnection('movie').getRepository('movie').save(movie);
