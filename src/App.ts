@@ -76,14 +76,22 @@ class App {
               console.log(content)
               const name = ``
               MovieService.findLastestMovie().then((result: any) => {
-                console.log(result[0])
-                const name = `名字： ${result[0].title}
-简介：${result[0].intro}`
+                let resultTpl = ''
+                for (let i = 0; i < result.length; i++) {
+                  resultTpl += _tpl(result[i])
+                }
+                function _tpl (movie) {
+                  const tpl = `电影名： ${movie.title}
+
+简介：${movie.intro}`
+                  return tpl;
+                }
+                
                               var xmlContent = `<xml><ToUserName><![CDATA[${body.FromUserName[0]}]]></ToUserName>
                                   <FromUserName><![CDATA[${body.ToUserName[0]}]]></FromUserName>
                                   <CreateTime>" + new Date().getTime() + "</CreateTime>
                                   <MsgType><![CDATA[text]]></MsgType>
-                                  <Content><![CDATA[${name}]]></Content></xml>`
+                                  <Content><![CDATA[${resultTpl}]]></Content></xml>`
                 res.send(xmlContent);
               })
             }
