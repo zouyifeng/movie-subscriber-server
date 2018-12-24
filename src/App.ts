@@ -82,8 +82,9 @@ class App {
                 }
                 function _tpl (movie) {
                   const tpl = `电影名： ${movie.title}
+简介：${movie.intro}
 
-简介：${movie.intro}`
+`
                   return tpl;
                 }
                 
