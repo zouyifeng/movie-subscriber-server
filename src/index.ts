@@ -75,7 +75,7 @@ const handleDetailPageResponse = (response: AxiosResponse) => {
   mv.publish_time = publishDate.replace('◎上映日期', '').trim()
 
   const now = new Date();
-  const nowStr = `${now.getFullYear()}-${now.getMonth()+1 < 10 ? '0' + now.getMonth()+1 : now.getMonth()+1}-${now.getDate()}`;
+  const nowStr = `${now.getFullYear()}-${now.getMonth()+1 < 10 ? '0' + now.getMonth()+1 : now.getMonth()+1}-${now.getDate() - 1}`;
   mv.create_time = nowStr;
 
   MovieService.newMovie(mv)
