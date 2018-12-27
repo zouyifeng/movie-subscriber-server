@@ -12,7 +12,6 @@ import app from './App'
 
 const port = 8089
 
-
 const listPageConfig: fetchConfig = {
   url: 'https://www.dytt8.net/', 
   methods: 'get',
@@ -40,7 +39,8 @@ const handleListPageResponse = (response: AxiosResponse) => {
     // movieList.push({ url, time })
     // console.log(url)
     const now = new Date()
-    const nowStr = `${now.getFullYear()}-${now.getMonth()+1 < 10 ? '0' + now.getMonth()+1 : now.getMonth()+1}-${now.getDate()}`
+    // 网站在当天发布前一天视频
+    const nowStr = `${now.getFullYear()}-${now.getMonth()+1 < 10 ? '0' + now.getMonth()+1 : now.getMonth()+1}-${now.getDate() - 1}`
     if (nowStr === time) {
       fetch({ url: `https://www.dytt8.net${url}`, methods: 'get', responseType: 'arraybuffer'}, handleDetailPageResponse)
     }
@@ -90,7 +90,7 @@ DBConnection.createConnection()
   .then(() => {
     console.log('数据库连接成功')
     fetch(listPageConfig, handleListPageResponse);
-    schedule.scheduleJob('1 1 * * * *', function() {
+    schedule.scheduleJob('1 1 18 * * *', function() {
       fetch(listPageConfig, handleListPageResponse);
     })    
   })
