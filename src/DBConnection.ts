@@ -1,4 +1,4 @@
-import { Config } from './Config'
+import { Config } from './config'
 import {createConnection, Connection} from "typeorm";
 import { Movie } from './entities/movie'
 import { User } from './entities/user'
