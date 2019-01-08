@@ -1,4 +1,4 @@
-## Skeleton for Node.js applications written in TypeScript
+## movie subscriber for Node.js applications written in TypeScript
 
 ### Development
 
