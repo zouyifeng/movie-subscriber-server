@@ -34,6 +34,9 @@ export class Movie {
 
   @Column()
   create_time: string;
+  
+  @Column()
+  type: string;
 }
 
 

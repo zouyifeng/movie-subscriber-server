@@ -53,9 +53,11 @@ const handleDetailPageResponse = (response: AxiosResponse) => {
   const intro: string = tempList[tempList.findIndex(item => item.includes('简　　介')) + 1]
   const publishDate: string = tempList.find(item => item.includes('上映日期'))
   const title: string = tempList.find(item => item.includes('片　　名'))
+  const translatedName: string = tempList.find(item => item.includes('译　　名'))
   const country: string = tempList.find(item => item.includes('产　　地'))
   const actor: string = tempList[tempList.findIndex(item => item.includes('主　　演')) + 1].trim() + '/' + tempList[tempList.findIndex(item => item.includes('主　　演')) + 2].trim()
   const rate: string = tempList.find(item => item.includes('豆瓣评分')) || '无'
+  const type: string = tempList.find(item => item.includes('类　　别')) || '无'
 
   const mv: Movie = new Movie()
   mv.actor = actor.trim()
@@ -64,12 +66,13 @@ const handleDetailPageResponse = (response: AxiosResponse) => {
   // console.log(downLoadUrl.trim().length)
   mv.intro = intro.trim()
   mv.country = country.replace('◎产　　地', '').trim()
-  mv.title = title.replace('◎片　　名', '').trim()
+  mv.title = title.replace('◎片　　名', '').trim() + '（' + translatedName.replace('◎译　　名', '').trim() + '）'
   mv.rate = rate.replace('◎豆瓣评分', '').trim()
   mv.publish_time = publishDate.replace('◎上映日期', '').trim()
+  mv.type = type.replace('◎类　　别', '').trim()
 
   const now = new Date();
-  const nowStr = `${now.getFullYear()}-${now.getMonth()+1 < 10 ? '0' + now.getMonth()+1 : now.getMonth()+1}-${now.getDate() - 1}`;
+  const nowStr = `${now.getFullYear()}-${now.getMonth() + 1 < 10 ? '0' + (now.getMonth() + 1) : now.getMonth() + 1}-${now.getDate() - 1}`;
   mv.create_time = nowStr;
 
   MovieService.newMovie(mv)

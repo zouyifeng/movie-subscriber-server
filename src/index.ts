@@ -4,6 +4,7 @@ import * as schedule from 'node-schedule'
 import app from './server'
 import { fetchMovie } from './controllers/website'
 const logger = require('./log').logger('index.ts', 'warn')
+import { createMenu } from './services/menu'
 
 const port = 8089
 
@@ -11,7 +12,7 @@ DBConnection.createConnection()
   .then(() => {
     logger.info('数据库连接成功')
     // schedule.scheduleJob('1 1 18 * * *', function() {
-      fetchMovie()
+    //   fetchMovie()
     // })
   })
   .catch(e => {
@@ -23,6 +24,5 @@ app.listen(port, err => {
   if (err) {
     return logger.error(err)
   }
-
   return logger.info(`server is listening on ${port}`)
 })

@@ -1,9 +1,9 @@
 import * as express from 'express'
-import axios from 'axios'
+import axios, { AxiosResponse } from 'axios'
+import { WechatService } from './services/wechat'
 import { Config } from './config'
 const log4js = require('./log')
 const logger = require('./log').logger('App.ts', 'warn')
-import { WechatService } from './services/wechat'
 
 class App {
   public express
@@ -16,6 +16,7 @@ class App {
 
   private mountRoutes(): void {
     const router = express.Router()
+
     router.all('/', (req, res) => {
       if (req.method === 'GET') {
         const {signature, timestamp, nonce, echostr} = req.query  // 微信加密签名
