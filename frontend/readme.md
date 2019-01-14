@@ -1,25 +1,14 @@
-## movie subscriber for Node.js applications written in TypeScript
+# React Server-Side Rendering Example
 
-### Development
+Above is an example playground for you to play with React & Redux on Client and Server sides.
+Before jumping into it, make sure to [read SSR tutorial on Medium](http://bit.ly/2IQ51Xq).
 
-```bash
-npm run dev
-```
+Here’s what we will build in this tutorial:
 
-### Running tests
+![Clash of Clans app card](https://cdn-images-1.medium.com/max/1000/1*wk04sWGQkw36_XLFvPACrA.png)
 
-```bash
-npm test
-```
 
-### Linting
+## Ready to become a React Pro?
+Subscribe to get your React skills blazing, immediately. 
 
-```bash
-npm run lint
-```
-
-### Building a container
-
-```bash
-docker build .
-```
+[Join the mailing list](http://eepurl.com/dpfhGn).  I won’t spam. 👍

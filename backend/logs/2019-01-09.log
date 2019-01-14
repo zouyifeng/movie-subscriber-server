@@ -1,0 +1,26 @@
+[2019-01-09 15:49:25.379] [INFO] index.ts - server is listening on 8089
+[2019-01-09 15:49:25.558] [INFO] index.ts - 数据库连接成功
+[2019-01-09 15:52:13.415] [INFO] App.ts - 微信auth验证成功
+[2019-01-09 15:52:35.503] [INFO] console - event
+[2019-01-09 16:00:53.293] [INFO] index.ts - server is listening on 8089
+[2019-01-09 16:00:53.962] [INFO] index.ts - 数据库连接成功
+[2019-01-09 16:02:59.697] [INFO] index.ts - server is listening on 8089
+[2019-01-09 16:02:59.936] [INFO] index.ts - 数据库连接成功
+[2019-01-09 16:03:19.033] [INFO] console - event
+[2019-01-09 16:10:01.385] [INFO] index.ts - server is listening on 8089
+[2019-01-09 16:10:02.235] [INFO] index.ts - 数据库连接成功
+[2019-01-09 16:11:23.405] [INFO] index.ts - server is listening on 8089
+[2019-01-09 16:11:24.307] [INFO] index.ts - 数据库连接成功
+[2019-01-09 16:12:18.064] [INFO] index.ts - server is listening on 8089
+[2019-01-09 16:12:18.660] [INFO] index.ts - 数据库连接成功
+[2019-01-09 16:15:20.693] [INFO] App.ts - 微信auth验证成功
+[2019-01-09 16:16:55.820] [INFO] console - event
+[2019-01-09 16:17:41.362] [INFO] index.ts - server is listening on 8089
+[2019-01-09 16:17:42.024] [INFO] index.ts - 数据库连接成功
+[2019-01-09 16:18:03.987] [INFO] console - event
+[2019-01-09 16:32:02.761] [INFO] index.ts - server is listening on 8089
+[2019-01-09 16:32:02.997] [INFO] index.ts - 数据库连接成功
+[2019-01-09 18:01:02.021] [INFO] index.ts - 上架电影 Goosebumps: Haunted Halloween / Goosebumps 2 / Goosebumps: Horrorland
+[2019-01-09 18:01:02.021] [INFO] index.ts - 上架日期 2018-10-12(美国)
+[2019-01-09 18:01:02.034] [INFO] index.ts - 上架电影 冥王星时刻/穿过黑夜/黑暗传
+[2019-01-09 18:01:02.034] [INFO] index.ts - 上架日期 2018-05-16(戛纳电影节)/2018-12-07(中国)

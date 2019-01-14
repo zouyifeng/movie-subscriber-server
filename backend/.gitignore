@@ -1,4 +1,7 @@
 node_modules
-.DS_Store
-assets/sass
-views
+dist
+npm-debug.log
+src/config.ts
+natapp
+natapp.sh
+log/*
