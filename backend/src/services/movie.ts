@@ -13,4 +13,11 @@ export class MovieService {
   public static async findLastestMovie(): Promise<any> {
     return getConnection('movie').getRepository('movie').findOne()
   }
+
+  // 找到最新的电影
+  public static async findLastestMovies(): Promise<any> {
+    return getConnection('movie').getRepository('movie').find({
+      take: 10
+    })
+  }
 }

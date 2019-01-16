@@ -1,5 +1,5 @@
 import React from 'react'
-import { renderToString } from 'react-dom/server'
+import { renderToStaticMarkup } from 'react-dom/server'
 
 import { Provider } from 'react-redux'
 import configureStore from './redux/configureStore'
@@ -11,7 +11,7 @@ module.exports = function render(initialState) {
   const store = configureStore(initialState)
 
   // render the App store static markup ins content variable
-  let content = renderToString(
+  let content = renderToStaticMarkup(
     <Provider store={store} >
        <App />
     </Provider>

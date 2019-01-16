@@ -22,7 +22,7 @@ class CardLeft extends Component {
          <this.numbersLeadingZero appno={this.props.totalapps} withclass="total" />
         </div>
 
-        <img className="app-icon" src={this.props.img.src} alt={this.props.img.alt} height="120" width="120"/>
+        <img className="app-icon" src={this.props.img}  width="120"/>
       </div>
     );
   }

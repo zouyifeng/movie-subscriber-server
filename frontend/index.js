@@ -1,7 +1,8 @@
 const express = require('express'),
           app = express(),
      template = require('./views/template')
-         path = require('path');
+         path = require('path')
+         axios = require('axios');
 
 
 // Serving static files
@@ -16,38 +17,39 @@ app.listen(process.env.PORT || 3000);
 // our apps data model
 const data = require('./assets/data.json');
 
-let initialState = {
-  isFetching: false,
-  apps: data
-}
+
 
 //SSR function import
 const ssr = require('./views/server');
 
 // server rendered home page
 app.get('/', (req, res) => {
-  const { preloadedState, content }  = ssr(initialState)
-  const response = template("Server Rendered Page", preloadedState, content)
-  console.log(response)
   res.setHeader('Cache-Control', 'assets, max-age=604800')
-  res.send(response);
+  axios.get('http://localhost:8089/lastest-movie').then(result => {
+    let initialState = {
+      isFetching: false,
+      apps: result.data
+    }
+    const { preloadedState, content }  = ssr(initialState)
+    const response = template("最新电影", preloadedState, content)
+    res.send(response);
+  })
 });
 
 // Pure client side rendered page
 app.get('/client', (req, res) => {
-  let response = template('Client Side Rendered page')
+  let response = template('最新电影')
   res.setHeader('Cache-Control', 'assets, max-age=604800')
   res.send(response);
 });
 
 // tiny trick to stop server during local development
+app.get('/exit', (req, res) => {
+  if(process.env.PORT) {
+    res.send("Sorry, the server denies your request")
+  } else {
+    res.send("shutting down")
+    process.exit(0)
+  }
 
-  app.get('/exit', (req, res) => {
-    if(process.env.PORT) {
-      res.send("Sorry, the server denies your request")
-    } else {
-      res.send("shutting down")
-      process.exit(0)
-    }
-
-  });
+});

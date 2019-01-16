@@ -1,0 +1,12 @@
+[2019-01-16 09:36:10.656] [INFO] index.ts - server is listening on 8089
+[2019-01-16 09:36:10.926] [INFO] index.ts - 数据库连接成功
+[2019-01-16 09:37:45.630] [INFO] index.ts - server is listening on 8089
+[2019-01-16 09:37:46.827] [INFO] index.ts - 数据库连接成功
+[2019-01-16 09:51:35.175] [DEBUG] logInfo - GET /lastest-movie 404
+[2019-01-16 09:53:35.159] [DEBUG] logInfo - GET /lastest-movie 404
+[2019-01-16 09:55:35.331] [DEBUG] logInfo - GET /lastest-movie 404
+[2019-01-16 09:57:35.333] [DEBUG] logInfo - GET /lastest-movie 404
+[2019-01-16 09:59:09.792] [INFO] index.ts - server is listening on 8089
+[2019-01-16 09:59:09.911] [INFO] index.ts - 数据库连接成功
+[2019-01-16 10:00:20.870] [INFO] index.ts - server is listening on 8089
+[2019-01-16 10:00:21.001] [INFO] index.ts - 数据库连接成功

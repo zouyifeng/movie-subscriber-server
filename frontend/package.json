@@ -8,14 +8,15 @@
     "npm": "5.7.1"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon index.js",
     "pack": "webpack --config webpack.config.js",
-    "babel": "babel src -d views",
+    "babel": "babel -w src -d views",
     "build": "npm run pack && npm run babel"
   },
   "author": "Rohit kumar",
   "license": "CC BY 4.0",
   "dependencies": {
+    "axios": "^0.18.0",
     "express": "^4.16.3",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",

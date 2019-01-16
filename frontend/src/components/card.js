@@ -11,8 +11,8 @@ class Card extends Component {
     for(let app of props.apps){
       cards.push(
         <div className="app-card" key={app.name}>
-          <CardLeft img={app.img} appno={cardNumber} totalapps={props.totalapps} />
-          <CardRight name={app.name} app={app}/>
+          <CardLeft img={app.cover} appno={cardNumber} totalapps={props.totalapps} />
+          <CardRight name={app.title} app={app}/>
         </div>
       )
       cardNumber++

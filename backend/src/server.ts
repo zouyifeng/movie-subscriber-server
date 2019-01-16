@@ -2,6 +2,7 @@ import * as express from 'express'
 import axios, { AxiosResponse } from 'axios'
 import { WechatService } from './services/wechat'
 import { Config } from './config'
+import { MovieService } from './services/movie';
 const log4js = require('./log')
 const logger = require('./log').logger('App.ts', 'warn')
 
@@ -38,6 +39,9 @@ class App {
           WechatService.dealWechatMessage(reqData.toString(), res);
         })
       }
+    })
+    this.express.get('/lastest-movie', (req, res) => {
+      MovieService.findLastestMovies().then(movies => res.send(movies))
     })
     this.express.use('/', router)
   }

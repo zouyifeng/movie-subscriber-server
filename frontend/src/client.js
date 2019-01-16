@@ -13,6 +13,7 @@ delete window.__STATE__;
 // reproduce the store used to render the page on server
 const store = configureStore(state)
 
+
 /**
  * hydrate the page to make sure both server and client
  * side pages are identical. This includes markup checking,
