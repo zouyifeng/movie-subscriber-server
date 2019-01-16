@@ -10,8 +10,6 @@ const menu = {
    }]
 }
 
-
-
 export const createMenu = async () => {
   const accessToken = await WechatService.getAccessToken()
   const url = `https://api.weixin.qq.com/cgi-bin/menu/create?access_token=${accessToken}`

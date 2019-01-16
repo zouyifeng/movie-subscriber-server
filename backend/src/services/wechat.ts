@@ -148,7 +148,7 @@ export const  WechatService = {
       const requestData = { 
         touser: openId[i].open_id,
         template_id: Config.NEW_MOVIE_TPL_MSG_ID,
-        url: 'http://6k3rqd.natappfree.cc',
+        url: 'http://m.zouyifeng.xyz/wechat-page',
         data: {
           name: {
             value: lastestMovie.title,

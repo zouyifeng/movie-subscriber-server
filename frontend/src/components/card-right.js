@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Title from './title';
-const tweet = require('./tweet');
 
 class CardRight extends Component {
 
@@ -12,7 +11,7 @@ class CardRight extends Component {
            <span className="app-lic">{this.props.app.type}</span>
         </div>
         <div className="app-intro" dangerouslySetInnerHTML={{__html: this.props.app.intro}} />
-        <hr />
+        <hr/>
       </div>
     );
   }
