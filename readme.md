@@ -1,5 +1,25 @@
 ## movie subscriber for Node.js applications written in TypeScript
 
-### fronted source code
+### Development
 
-### backend source code
+```bash
+npm run dev
+```
+
+### Running tests
+
+```bash
+npm test
+```
+
+### Linting
+
+```bash
+npm run lint
+```
+
+### Building a container
+
+```bash
+docker build .
+```

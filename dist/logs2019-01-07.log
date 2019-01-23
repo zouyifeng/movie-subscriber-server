@@ -1,0 +1,106 @@
+[2019-01-07 16:05:59.879] [DEBUG] index.ts - This is an index page! -- log4js
+[2019-01-07 16:05:59.881] [INFO] index.ts - This is an index page! -- log4js
+[2019-01-07 16:05:59.881] [WARN] index.ts - This is an index page! -- log4js
+[2019-01-07 16:05:59.881] [ERROR] index.ts - This is an index page! -- log4js
+[2019-01-07 16:05:59.881] [FATAL] index.ts - This is an index page! -- log4js
+[2019-01-07 16:05:59.891] [INFO] console - server is listening on 8090
+[2019-01-07 16:06:00.538] [INFO] console - 数据库连接成功
+[2019-01-07 16:06:01.180] [DEBUG] index.ts - This is an index page! -- log4js
+[2019-01-07 16:06:01.182] [INFO] index.ts - This is an index page! -- log4js
+[2019-01-07 16:06:01.182] [WARN] index.ts - This is an index page! -- log4js
+[2019-01-07 16:06:01.182] [ERROR] index.ts - This is an index page! -- log4js
+[2019-01-07 16:06:01.182] [FATAL] index.ts - This is an index page! -- log4js
+[2019-01-07 16:06:01.186] [INFO] console - server is listening on 8090
+[2019-01-07 16:06:01.395] [INFO] console - 数据库连接成功
+[2019-01-07 16:06:17.375] [DEBUG] index.ts - This is an index page! -- log4js
+[2019-01-07 16:06:17.378] [INFO] index.ts - This is an index page! -- log4js
+[2019-01-07 16:06:17.378] [WARN] index.ts - This is an index page! -- log4js
+[2019-01-07 16:06:17.378] [ERROR] index.ts - This is an index page! -- log4js
+[2019-01-07 16:06:17.378] [FATAL] index.ts - This is an index page! -- log4js
+[2019-01-07 16:06:17.391] [INFO] console - server is listening on 8090
+[2019-01-07 16:06:17.575] [INFO] console - 数据库连接成功
+[2019-01-07 16:06:18.895] [DEBUG] index.ts - This is an index page! -- log4js
+[2019-01-07 16:06:18.896] [INFO] index.ts - This is an index page! -- log4js
+[2019-01-07 16:06:18.897] [WARN] index.ts - This is an index page! -- log4js
+[2019-01-07 16:06:18.897] [ERROR] index.ts - This is an index page! -- log4js
+[2019-01-07 16:06:18.897] [FATAL] index.ts - This is an index page! -- log4js
+[2019-01-07 16:06:18.900] [INFO] console - server is listening on 8090
+[2019-01-07 16:06:19.106] [INFO] console - 数据库连接成功
+[2019-01-07 16:06:48.289] [INFO] console - /Users/zouyifeng/Documents/Project/myself/zouyifeng-github/movie-subscriber/dist/logs
+[2019-01-07 16:06:48.330] [DEBUG] index.ts - This is an index page! -- log4js
+[2019-01-07 16:06:48.331] [INFO] index.ts - This is an index page! -- log4js
+[2019-01-07 16:06:48.331] [WARN] index.ts - This is an index page! -- log4js
+[2019-01-07 16:06:48.331] [ERROR] index.ts - This is an index page! -- log4js
+[2019-01-07 16:06:48.331] [FATAL] index.ts - This is an index page! -- log4js
+[2019-01-07 16:06:48.334] [INFO] console - server is listening on 8090
+[2019-01-07 16:06:48.593] [INFO] console - 数据库连接成功
+[2019-01-07 16:07:04.136] [INFO] console - /Users/zouyifeng/Documents/Project/myself/zouyifeng-github/movie-subscriber/logs
+[2019-01-07 16:07:04.176] [DEBUG] index.ts - This is an index page! -- log4js
+[2019-01-07 16:07:04.176] [INFO] index.ts - This is an index page! -- log4js
+[2019-01-07 16:07:04.177] [WARN] index.ts - This is an index page! -- log4js
+[2019-01-07 16:07:04.177] [ERROR] index.ts - This is an index page! -- log4js
+[2019-01-07 16:07:04.177] [FATAL] index.ts - This is an index page! -- log4js
+[2019-01-07 16:07:04.182] [INFO] console - server is listening on 8090
+[2019-01-07 16:07:04.374] [INFO] console - 数据库连接成功
+[2019-01-07 16:08:36.639] [INFO] console - /Users/zouyifeng/Documents/Project/myself/zouyifeng-github/movie-subscriber/logs
+[2019-01-07 16:08:36.701] [DEBUG] index.ts - This is an index page! -- log4js
+[2019-01-07 16:08:36.701] [INFO] index.ts - This is an index page! -- log4js
+[2019-01-07 16:08:36.701] [WARN] index.ts - This is an index page! -- log4js
+[2019-01-07 16:08:36.701] [ERROR] index.ts - This is an index page! -- log4js
+[2019-01-07 16:08:36.702] [FATAL] index.ts - This is an index page! -- log4js
+[2019-01-07 16:08:36.706] [INFO] console - server is listening on 8090
+[2019-01-07 16:08:36.946] [INFO] console - 数据库连接成功
+[2019-01-07 16:08:38.203] [INFO] console - /Users/zouyifeng/Documents/Project/myself/zouyifeng-github/movie-subscriber/logs
+[2019-01-07 16:08:38.244] [DEBUG] index.ts - This is an index page! -- log4js
+[2019-01-07 16:08:38.245] [INFO] index.ts - This is an index page! -- log4js
+[2019-01-07 16:08:38.245] [WARN] index.ts - This is an index page! -- log4js
+[2019-01-07 16:08:38.245] [ERROR] index.ts - This is an index page! -- log4js
+[2019-01-07 16:08:38.245] [FATAL] index.ts - This is an index page! -- log4js
+[2019-01-07 16:08:38.248] [INFO] console - server is listening on 8090
+[2019-01-07 16:08:38.833] [INFO] console - 数据库连接成功
+[2019-01-07 16:08:52.035] [INFO] console - /Users/zouyifeng/Documents/Project/myself/zouyifeng-github/movie-subscriber/logs
+[2019-01-07 16:08:52.083] [DEBUG] index.ts - This is an index page! -- log4js
+[2019-01-07 16:08:52.083] [INFO] index.ts - This is an index page! -- log4js
+[2019-01-07 16:08:52.083] [WARN] index.ts - This is an index page! -- log4js
+[2019-01-07 16:08:52.083] [ERROR] index.ts - This is an index page! -- log4js
+[2019-01-07 16:08:52.083] [FATAL] index.ts - This is an index page! -- log4js
+[2019-01-07 16:08:52.086] [INFO] console - server is listening on 8090
+[2019-01-07 16:08:52.292] [INFO] console - 数据库连接成功
+[2019-01-07 16:08:53.605] [INFO] console - /Users/zouyifeng/Documents/Project/myself/zouyifeng-github/movie-subscriber/logs
+[2019-01-07 16:08:53.649] [DEBUG] index.ts - This is an index page! -- log4js
+[2019-01-07 16:08:53.649] [INFO] index.ts - This is an index page! -- log4js
+[2019-01-07 16:08:53.649] [WARN] index.ts - This is an index page! -- log4js
+[2019-01-07 16:08:53.651] [ERROR] index.ts - This is an index page! -- log4js
+[2019-01-07 16:08:53.652] [FATAL] index.ts - This is an index page! -- log4js
+[2019-01-07 16:08:53.655] [INFO] console - server is listening on 8090
+[2019-01-07 16:08:53.884] [INFO] console - 数据库连接成功
+[2019-01-07 16:13:01.987] [INFO] console - /Users/zouyifeng/Documents/Project/myself/zouyifeng-github/movie-subscriber/logs
+[2019-01-07 16:13:02.045] [DEBUG] index.ts - This is an index page! -- log4js
+[2019-01-07 16:13:02.046] [INFO] index.ts - This is an index page! -- log4js
+[2019-01-07 16:13:02.046] [WARN] index.ts - This is an index page! -- log4js
+[2019-01-07 16:13:02.046] [ERROR] index.ts - This is an index page! -- log4js
+[2019-01-07 16:13:02.046] [FATAL] index.ts - This is an index page! -- log4js
+[2019-01-07 16:13:02.052] [INFO] console - server is listening on 8090
+[2019-01-07 16:13:03.405] [INFO] console - /Users/zouyifeng/Documents/Project/myself/zouyifeng-github/movie-subscriber/logs
+[2019-01-07 16:13:03.447] [DEBUG] index.ts - This is an index page! -- log4js
+[2019-01-07 16:13:03.448] [INFO] index.ts - This is an index page! -- log4js
+[2019-01-07 16:13:03.448] [WARN] index.ts - This is an index page! -- log4js
+[2019-01-07 16:13:03.448] [ERROR] index.ts - This is an index page! -- log4js
+[2019-01-07 16:13:03.448] [FATAL] index.ts - This is an index page! -- log4js
+[2019-01-07 16:13:03.451] [INFO] console - server is listening on 8090
+[2019-01-07 16:13:04.377] [INFO] console - 数据库连接成功
+[2019-01-07 16:13:53.436] [INFO] console - /Users/zouyifeng/Documents/Project/myself/zouyifeng-github/movie-subscriber/logs
+[2019-01-07 16:13:53.484] [DEBUG] index.ts - This is an index page! -- log4js
+[2019-01-07 16:13:53.484] [INFO] index.ts - This is an index page! -- log4js
+[2019-01-07 16:13:53.485] [WARN] index.ts - This is an index page! -- log4js
+[2019-01-07 16:13:53.485] [ERROR] index.ts - This is an index page! -- log4js
+[2019-01-07 16:13:53.485] [FATAL] index.ts - This is an index page! -- log4js
+[2019-01-07 16:13:53.488] [INFO] console - server is listening on 8090
+[2019-01-07 16:13:54.943] [INFO] console - /Users/zouyifeng/Documents/Project/myself/zouyifeng-github/movie-subscriber/logs
+[2019-01-07 16:13:54.981] [DEBUG] index.ts - This is an index page! -- log4js
+[2019-01-07 16:13:54.981] [INFO] index.ts - This is an index page! -- log4js
+[2019-01-07 16:13:54.982] [WARN] index.ts - This is an index page! -- log4js
+[2019-01-07 16:13:54.982] [ERROR] index.ts - This is an index page! -- log4js
+[2019-01-07 16:13:54.982] [FATAL] index.ts - This is an index page! -- log4js
+[2019-01-07 16:13:54.985] [INFO] console - server is listening on 8090
+[2019-01-07 16:13:57.684] [INFO] console - 数据库连接成功
