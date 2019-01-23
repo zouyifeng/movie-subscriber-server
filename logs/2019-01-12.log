@@ -1,8 +1,0 @@
-[2019-01-12 15:01:12.464] [INFO] index.ts - server is listening on 8089
-[2019-01-12 15:01:13.969] [INFO] index.ts - 数据库连接成功
-[2019-01-12 19:52:03.610] [INFO] App.ts - 微信auth验证成功
-[2019-01-12 19:52:44.808] [INFO] index.ts - server is listening on 8089
-[2019-01-12 19:52:46.292] [INFO] index.ts - 数据库连接成功
-[2019-01-12 19:53:31.590] [INFO] console - 模板消息推送成功
-[2019-01-12 19:53:36.097] [INFO] console - 模板消息推送成功
-[2019-01-12 19:53:40.726] [INFO] console - 模板消息推送成功

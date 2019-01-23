@@ -2,3 +2,4 @@ node_modules
 dist
 natapp
 natapp.sh
+logs/*
