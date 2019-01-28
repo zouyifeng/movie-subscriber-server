@@ -41,7 +41,9 @@ class App {
       }
     })
     this.express.get('/lastest-movie', (req, res) => {
-      MovieService.findLastestMovies().then(movies => res.send(movies))
+      MovieService.findLastestMovies().then(movies => {
+        res.send(movies)
+      })
     })
     this.express.use('/', router)
   }
