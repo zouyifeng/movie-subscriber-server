@@ -10,9 +10,9 @@ const port = 8089
 DBConnection.createConnection()
   .then(() => {
     logger.info('数据库连接成功')
-    // schedule.scheduleJob('1 * * * * *', function() {
-    //   fetchMovie()
-    // })
+    schedule.scheduleJob('1 1 13 * * *', function() {
+      fetchMovie()
+    })
   })
   .catch(e => {
     logger.error('数据库连接错误')
