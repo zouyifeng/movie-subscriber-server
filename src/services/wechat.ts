@@ -72,6 +72,7 @@ export const  WechatService = {
       res.send(xmlContent)
     } else if (body.Event[0] === 'CLICK') {
       WechatService.sendNewMovieTplMsg(body.FromUserName[0])
+      res.send('success')
     } else {
       res.send('success')
     }
@@ -140,6 +141,7 @@ export const  WechatService = {
       openId = [{open_id: openIdFromEvent}]
     }
     const lastestMovie = await MovieService.findLastestMovie()
+
     
     //发送模板消息的接口
     const url = `https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=${access_token}`
@@ -151,15 +153,15 @@ export const  WechatService = {
         url: 'http://m.zouyifeng.xyz/wechat-page/list',
         data: {
           name: {
-            value: lastestMovie.title,
+            value: lastestMovie[0].title,
             color: "#173177"
           },
           type: {
-            value: lastestMovie.type,
+            value: lastestMovie[0].type,
             color: "#173177"
           },
           rate: {
-            value: lastestMovie.rate,
+            value: lastestMovie[0].rate,
             color: "#173177"
           }
         }
