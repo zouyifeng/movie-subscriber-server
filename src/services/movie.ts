@@ -8,20 +8,20 @@ const logger = require('../log').logger('services/movie.ts', 'warn')
 export class MovieService {
   public static async newMovie(movie: Movie) {
     // getConnection('movie').getRepository('movie').save(movie);
-    logger.info(`INSERT INTO movie (
-      title, intro, cover, actor, country, publish_time, rate, create_time, download_url, type
-    ) VALUES (
-      "${movie.title}", 
-      "${movie.intro}", 
-      "${movie.cover}", 
-      "${movie.actor}", 
-      "${movie.country}", 
-      "${movie.publish_time}", 
-      "${movie.rate}", 
-      "${movie.create_time}", 
-      "${movie.download_url}",
-      "${movie.type}"
-    )`)
+    // logger.info(`INSERT INTO movie (
+    //   title, intro, cover, actor, country, publish_time, rate, create_time, download_url, type
+    // ) VALUES (
+    //   "${movie.title}", 
+    //   "${movie.intro}", 
+    //   "${movie.cover}", 
+    //   "${movie.actor}", 
+    //   "${movie.country}", 
+    //   "${movie.publish_time}", 
+    //   "${movie.rate}", 
+    //   "${movie.create_time}", 
+    //   "${movie.download_url}",
+    //   "${movie.type}"
+    // )`)
     getConnection('movie').query(`INSERT INTO movie (
       title, intro, cover, actor, country, publish_time, rate, create_time, download_url, type
     ) VALUES (

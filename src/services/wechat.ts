@@ -87,8 +87,9 @@ export const  WechatService = {
     if (body.MsgType[0] === 'text') {
       MovieService.findLastestMovie().then((movie: any) => {
         let resultTpl = ''
-        resultTpl = `电影名： ${movie.title}
-简介：${movie.intro}
+        resultTpl = `电影名： ${movie[0].title}
+        
+简介：${movie[0].intro}
 
 `
 
@@ -132,7 +133,6 @@ export const  WechatService = {
    * 发送收到新电影的模板消息
    */
   sendNewMovieTplMsg: async (openIdFromEvent?: string) => {
-
     const access_token = await WechatService.getAccessToken()
     let openId
     if (!openIdFromEvent) {

@@ -3,6 +3,7 @@ import * as iconv from 'iconv-lite'
 import * as cheerio from 'cheerio'
 import { Movie } from '../entities/movie'
 import { MovieService } from '../services/movie'
+import { WechatService } from '../services/wechat';
 const logger = require('../log').logger('index.ts', 'warn')
 
 const listPageConfig: fetchConfig = {
@@ -49,7 +50,6 @@ const handleDetailPageResponse = (response: AxiosResponse) => {
   const downLoadUrl: string = $movie.find('a').eq(0).attr('href')
   let tempList = $movie.find('p').eq(0).html().trim().split('<br>')
   tempList = tempList.filter(item => item);
-  // console.log(tempList)
   const intro: string = tempList[tempList.findIndex(item => item.includes('简　　介')) + 1]
   const publishDate: string = tempList.find(item => item.includes('上映日期'))
   const title: string = tempList.find(item => item.includes('片　　名'))
@@ -63,7 +63,6 @@ const handleDetailPageResponse = (response: AxiosResponse) => {
   mv.actor = actor.trim()
   mv.cover = cover.trim()
   mv.download_url = downLoadUrl.trim()
-  // console.log(downLoadUrl.trim().length)
   mv.intro = intro.trim()
   mv.country = country.replace('◎产　　地', '').trim()
   mv.title = title.replace('◎片　　名', '').trim() + '（' + translatedName.replace('◎译　　名', '').trim() + '）'
@@ -75,7 +74,9 @@ const handleDetailPageResponse = (response: AxiosResponse) => {
   const nowStr = `${now.getFullYear()}-${now.getMonth() + 1 < 10 ? '0' + (now.getMonth() + 1) : now.getMonth() + 1}-${now.getDate() - 1}`;
   mv.create_time = nowStr;
 
-  MovieService.newMovie(mv)
+  MovieService.newMovie(mv).then(() => {
+    WechatService.sendNewMovieTplMsg();
+  })
   logger.info(`上架电影 ${mv.title}`)
   logger.info(`上架日期 ${mv.publish_time}`)
 }
