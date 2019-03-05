@@ -1,25 +1,17 @@
 ## movie subscriber for Node.js applications written in TypeScript
 
-### Development
+利用定时任务，爬取[电影天堂](http://dytt8.net)的最新电影，通过微信公众号模板消息，通知订阅者
 
-```bash
-npm run dev
-```
+![电影天堂](https://img.zouyifeng.xyz//blog/dytt8.png)
+<p align="center">电影天堂</p>
 
-### Running tests
+<p align="center">
+  <img src="https://img.zouyifeng.xyz//blog/movie-news.png" width="50%" height="50%">
+</p>
+<p align="center">模板消息</p>
 
-```bash
-npm test
-```
+<p align="center">
+  <img src="https://img.zouyifeng.xyz//blog/movie-news-detail.png" width="50%" height="50%">
+</p>
 
-### Linting
-
-```bash
-npm run lint
-```
-
-### Building a container
-
-```bash
-docker build .
-```
+<p align="center">电影详情</p>
