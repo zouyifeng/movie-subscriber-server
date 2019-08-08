@@ -13,12 +13,15 @@ class App {
     this.express = express()
     this.mountRoutes()
     log4js.use(this.express)
+    console.log('get');
+
   }
 
   private mountRoutes(): void {
     const router = express.Router()
 
     router.all('/', (req, res) => {
+
       if (req.method === 'GET') {
         const {signature, timestamp, nonce, echostr} = req.query  // 微信加密签名
 
@@ -40,11 +43,20 @@ class App {
         })
       }
     })
+    // 获取最新电影列表
     this.express.get('/lastest-movie', (req, res) => {
       MovieService.findLastestMovies().then(movies => {
         res.send(movies)
       })
     })
+    // 获取电影详情
+    this.express.get('/get-movie/:id', (req, res) => {
+        console.log(req.params.id);
+        MovieService.findMovie(req.params.id).then(movie => {
+          res.send(movie)
+        })
+      }
+    )
     this.express.use('/', router)
   }
 }
