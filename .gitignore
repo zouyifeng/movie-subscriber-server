@@ -3,3 +3,4 @@ dist
 natapp
 natapp.sh
 logs/*
+src/config.ts

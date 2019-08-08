@@ -22,7 +22,7 @@ export class MovieService {
     //   "${movie.download_url}",
     //   "${movie.type}"
     // )`)
-    getConnection('movie').query(`INSERT INTO movie (
+    console.log(`INSERT INTO movie (
       title, intro, cover, actor, country, publish_time, rate, create_time, download_url, type
     ) VALUES (
       "${movie.title}", 
@@ -35,7 +35,22 @@ export class MovieService {
       "${movie.create_time}", 
       "${movie.download_url}",
       "${movie.type}"
+    )`);
+    getConnection('movie').query(`INSERT INTO movie (
+      title, intro, cover, actor, country, publish_time, rate, create_time, download_url, type
+    ) VALUES (
+      '${movie.title}', 
+      '${movie.intro}', 
+      '${movie.cover}', 
+      '${movie.actor}', 
+      '${movie.country}', 
+      '${movie.publish_time}', 
+      '${movie.rate}', 
+      '${movie.create_time}', 
+      '${movie.download_url}',
+      '${movie.type}'
     )`)
+    
   }
   // 找到最新的电影
   public static async findLastestMovie(): Promise<any> {
