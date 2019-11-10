@@ -1,6 +1,6 @@
 import { injectable } from 'inversify';
 import { Movie } from '../entities/movie';
-import { getManager, getConnection, Equal } from 'typeorm';
+import { getManager, getConnection, Equal, getConnectionOptions } from 'typeorm';
 import { DBConnection } from '../DBConnection'
 const logger = require('../log').logger('services/movie.ts', 'warn')
 
@@ -37,4 +37,10 @@ export class MovieService {
   public static async findMovie(id: string): Promise<any> {
     return getConnection('movie').query(`SELECT * from movie where id = ${id}`)
   }
+
+  // 分页查询
+  public static async getByMovieByPage(pageIndex: number, pageSize: number): Promise<any> {
+    return getConnection('movie').query(`SELECT * from movie order by id limit ${pageSize * (pageIndex - 1)}, ${pageSize}`)
+  }
+
 }

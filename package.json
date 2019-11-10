@@ -16,8 +16,11 @@
   "dependencies": {
     "@types/node": "7.0.22",
     "axios": "^0.18.0",
+    "body-parser": "^1.19.0",
     "cheerio": "^1.0.0-rc.2",
+    "cookie-parser": "^1.4.4",
     "express": "4.15.3",
+    "express-session": "^1.17.0",
     "iconv-lite": "^0.4.24",
     "inversify": "^5.0.1",
     "jssha": "^2.3.1",
