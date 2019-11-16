@@ -4,3 +4,4 @@ natapp
 natapp.sh
 logs/*
 src/config.ts
+.vscode/*

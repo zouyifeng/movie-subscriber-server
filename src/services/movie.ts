@@ -40,7 +40,10 @@ export class MovieService {
 
   // 分页查询
   public static async getByMovieByPage(pageIndex: number, pageSize: number): Promise<any> {
-    return getConnection('movie').query(`SELECT * from movie order by id limit ${pageSize * (pageIndex - 1)}, ${pageSize}`)
+    const list = await getConnection('movie').query(`SELECT * from movie order by id limit ${pageSize * (pageIndex - 1)}, ${pageSize}`)
+    let total = await getConnection('movie').query(`SELECT count(1) FROM movie`)
+    total = Number(total[0]['count(1)'])
+    return { list, total }
   }
 
 }

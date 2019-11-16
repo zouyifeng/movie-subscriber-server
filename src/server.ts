@@ -18,6 +18,12 @@ class App {
     this.express = express()
     this.express.use(bodyParser.json())
     this.express.use(cookieParser())
+    var allowCrossDomain = function (req, res, next) {
+      res.header('Access-Control-Allow-Origin', '*');//自定义中间件，设置跨域需要的响应头。
+      res.header('Access-Control-Allow-Headers', 'Content-Type');
+      next();
+    };
+    this.express.use(allowCrossDomain)
     this.express.use(session({
       secret :  'secret', // 对session id 相关的cookie 进行签名
       resave : true,
@@ -83,8 +89,8 @@ class App {
       // console.log(req.params, req.body, req.query);
       console.log(req.params);
       console.dir(req.body)
-      MovieService.getByMovieByPage(req.body.pageIndex, req.body.pageSize).then(list => {
-        res.send(list)
+      MovieService.getByMovieByPage(req.body.pageIndex, req.body.pageSize).then(data => {
+        res.send(data)
       })
       // for (let i in req.body) {
       //   console.log(i);
@@ -107,9 +113,13 @@ class App {
     })
 
     this.express.post('/login', async (req, res) => {
+      console.log('req: ', req.params);
       if (req.body) {
         const { username, password } = req.body;
+        console.log('req.body: ', req.body);
+        console.log(' username, password : ',  username, password );
         const findResult = await UserService.findAdminUser(username, password)
+        console.log('findResult: ', findResult);
         if (findResult.length === 0) {
           res.send({ result: 0, msg: '用户不存在或密码不正确' })
         } else {
