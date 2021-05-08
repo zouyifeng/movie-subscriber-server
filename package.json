@@ -31,7 +31,7 @@
     "raw-body": "^2.3.3",
     "reflect-metadata": "^0.1.12",
     "superagent-charset": "^1.2.0",
-    "typeorm": "^0.2.9",
+    "typeorm": "^0.2.25",
     "urlencode": "^1.1.0",
     "xml2js": "^0.4.19"
   },
